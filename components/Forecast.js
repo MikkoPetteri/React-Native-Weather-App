@@ -1,6 +1,7 @@
 import { API_KEY } from "../utils/WeatherAPIKey";
 import { Alert } from "react-native";
 
+// Fetching Current weather data from OpenWeather database, JSON-format
 export const getCurrentWeather = async (lat, lon, setWeatherData) => {
     if(lat==null || lon==null) {
         Alert.alert('Error', 'Invalid or unknown location.');
@@ -27,6 +28,7 @@ export const getCurrentWeather = async (lat, lon, setWeatherData) => {
 	}
 };
 
+// Fetching 5 day forecast data from OpenWeather database, JSON-format
 export const getForecast = async (lat, lon, setWeatherData) => {
     if(lat==null || lon==null) {
         Alert.alert('Error', 'Invalid or unknown location.');

@@ -6,6 +6,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { getCoordinates } from './components/Geocode';
 import { getCurrentWeather, getForecast } from './components/Forecast';
 import Weather from './components/Weather';
+import { Alert } from "react-native";
 
 export default function App() {
   const [location, setLocation] = useState("");
@@ -59,6 +60,10 @@ export default function App() {
     setGeoData(null);
   }
 
+  const ShowInfo = () => {
+    Alert.alert('Info', 'Weather application for current weather and 5 day forecast use. Data provider: OpenWeather -Api.\n\n V1.0 ');
+  };
+
   return (
     <SafeAreaView style={styles.base}>
       <View style={styles.headContainer}>
@@ -89,8 +94,8 @@ export default function App() {
         )}
       </View>
 
-      <Pressable style={styles.ibtn}>
-          <MaterialIcons name="info" size={30} color="#fff" />
+      <Pressable onPress={ShowInfo} style={styles.ibtn}>
+        <MaterialIcons name="info" size={30} color="#fff" />
       </Pressable>
       
       <StatusBar style="light" />
@@ -101,7 +106,7 @@ export default function App() {
 const styles = StyleSheet.create({
   base: {
     flex: 1,
-    backgroundColor: '#464748',
+    backgroundColor: '#5c5b59',
     alignItems: 'center',
     justifyContent: 'center',
   },

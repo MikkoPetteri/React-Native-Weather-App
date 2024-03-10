@@ -1,6 +1,7 @@
 import { API_KEY } from "../utils/WeatherAPIKey";
 import { Alert } from "react-native";
 
+// Solve geocode: Finding coordinates by wanted laction to fetch weather data later on.
 export const getCoordinates = async (location, setGeoData) => {
     console.log('Getting Coordinates:', location);
 	try {
@@ -12,6 +13,8 @@ export const getCoordinates = async (location, setGeoData) => {
             throw new Error('Failed to fetch Coordinates data');
 		}
 
+        // Some location names have more than 1 coordinates, but I am interesting at this point only One. 
+        // And its limited in upper API request.
         var lonValue = null;
         var latValue = null;
         for (var i=0;i<dataJson.length;i++) {
