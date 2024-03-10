@@ -108,7 +108,7 @@ export default function Weather({weatherData, forecast}) {
             <Text style={styles.loadingText}>Loading Data...</Text>
         </View>
         )}
-		</View>
+		  </View>
 	);
 }
 
