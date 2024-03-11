@@ -61,7 +61,7 @@ export default function App() {
   }
 
   const ShowInfo = () => {
-    Alert.alert('Info', 'Weather application for current weather and 5 day forecast use. Data provider: OpenWeather -Api.\n\n V1.0 ');
+    Alert.alert('Info', 'Weather application for current weather and 5 day forecast. Data provider: OpenWeather -Api.\n\n V1.0 ');
   };
 
   return (
@@ -95,7 +95,7 @@ export default function App() {
       </View>
 
       <Pressable onPress={ShowInfo} style={styles.ibtn}>
-        <MaterialIcons name="info" size={30} color="#fff" />
+        <MaterialIcons name="info" size={32} color="#fff" />
       </Pressable>
       
       <StatusBar style="light" />
