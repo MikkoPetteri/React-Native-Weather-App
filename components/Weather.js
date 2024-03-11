@@ -27,7 +27,6 @@ export default function Weather({weatherData, forecast}) {
             forecast info is taken from midday forecast. */
             for (var i=0;i<weatherData.cnt;i++) {
                 //console.log(weatherData.list[i]);
-                if(new Date(weatherData.list[i].dt*1000).getDate() == new Date().getDate()) continue;
                 minTempVals.push(weatherData.list[i].main.temp_min);
                 maxTempVals.push(weatherData.list[i].main.temp_max);
 
